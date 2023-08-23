@@ -272,7 +272,7 @@ header nav .logoNav img {
 }
 
 .titulo{
-   padding-top: 2%;
+   padding-top: 5.5%;
    margin: auto;
    height: 120px;
    width: 80%;
@@ -382,6 +382,7 @@ header nav .logoNav img {
    height: 50%;
    margin: 0 auto;
    color: #c7c6c6;
+   text-align: justify;
 }
 
 .cerrar{
@@ -479,6 +480,7 @@ footer {
 .imgfooter {
    padding: 20px 15px 2px;
 }
+
 @media  screen and (min-width: 769px) and (max-width: 920px) { 
    .buscar{
       width: 140px;
@@ -488,6 +490,17 @@ footer {
       margin: 0;
       height: 90px;
    }
+   header nav .logoNav img {
+      width: 150px;
+      height: 151px;
+   }
+
+   .nav {
+      padding: 1rem;
+      width: 250px;
+      gap: 4rem;
+   }
+   
    .container-peliculas{
       width: 100%;
    }
@@ -498,17 +511,14 @@ footer {
    .titulo{
       padding-top: 15%;
    }
-   .modal{
-    width: 100%;
-    flex-direction: column;
-   }
    .container-modal{
+      margin-top: 12%;
       flex-direction: column;
-      width: 100%;
+      width: 80%;
    }
    .video{
       width: 100%;
-      height: 200vh; 
+      height: 100%; 
       padding: 0;
    }
    .descripcion{
@@ -528,5 +538,111 @@ footer {
    }
    .informacion li{
       width: 120px;
+   }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+   header {
+      height: 50px;
+   }
+
+   .nav {
+      padding: 15px;
+      width: 200px;
+   }
+
+   .nav-list {
+      gap: 2rem;
+   }
+
+   header .nav .logoNav img {
+      width: 150px;
+      height: 150px;
+   }
+
+   header div img {
+      height: 20px;
+   }
+
+   #logo {
+      height: 30px;
+   }
+
+   .buscar {
+      height: 1px;
+      width: 140px;
+   }
+
+   .titulo {
+      padding-top: 13%;
+      font-size: 30px;
+   }
+
+   #genre-buttons {
+      width: 90%;
+   }
+
+   #genre-buttons button{
+      height: 30px;
+      width: 17%;
+   }
+
+   .modal{
+      margin-top: 60px;
+   }
+
+   .container-modal{
+      flex-direction: column;
+      width: 70%;
+      height: auto;
+      justify-items: center;
+   }
+
+   .video{
+      width: 100%;
+   }
+
+   .descripcion{
+      width: 80%;
+      font-size: 15px;
+      margin: 0 auto;
+      padding-top: 15px;
+      text-align: justify;
+   }
+
+   .close-modal{
+      height: 25px;
+      width: 25px;
+   }
+
+   .tarjeta{
+      width: 150px;
+      height: 200px;
+   }
+
+   footer {
+      height: 200px;
+      font-size: 10px;
+   }
+
+   .redes {
+      width: 50%;
+   }
+
+   .redes figure a img {
+      width: 20px;
+      height: 20px;
+   }
+
+   .imgfooter {
+      padding: 20px 0 0 8px;
+   }
+
+   .informacionFooter {
+      padding: 30px;
+   }
+
+   .informacion {
+      line-height: 25px;
    }
 }
