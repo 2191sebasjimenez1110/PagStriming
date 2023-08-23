@@ -516,3 +516,34 @@ footer {
 .imgfooter {
    padding: 20px 15px 2px;
 }
+@media  screen and (min-width: 769px) and (max-width: 920px) { 
+   .buscar{
+      width: 150px;
+      height: 5px;
+   }
+   .carrusel{
+      display: flex;
+      width: 50%;
+   }
+   .tarjeta{
+      width: 10px;
+      display: flex;
+   }
+   footer{
+      width: 100%;
+   }
+   .redes{
+      width: 40%;
+   }
+   .informacionFooter{
+      width: 60%;
+      padding: 0;
+      margin: auto 0;
+   }
+   .informacion{
+   }
+   .imgfooter{
+      padding: 0 8px;
+   }
+   
+}

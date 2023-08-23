@@ -491,3 +491,54 @@ footer {
 .imgfooter {
    padding: 20px 15px 2px;
 }
+@media  screen and (min-width: 769px) and (max-width: 920px) { 
+   .buscar{
+      width: 140px;
+   }
+   header{
+      padding: 0;
+      margin: 0;
+      height: 90px;
+   }
+   .container-peliculas{
+      width: 100%;
+   }
+   .tarjeta{
+      width: 140px;
+      height: 200px;
+   }
+   .titulo{
+      padding-top: 15%;
+   }
+   .modal{
+    width: 100%;
+    flex-direction: column;
+   }
+   .container-modal{
+      flex-direction: column;
+      width: 100%;
+   }
+   .video{
+      width: 100%;
+      height: 200vh; 
+      padding: 0;
+   }
+   .descripcion{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+   }
+   footer{
+      width: 100%;
+   }
+   .informacionFooter{
+      padding: 10% 0 0 0;
+   }
+   .informacion{
+      margin-right: 20px;
+      padding: 0;
+   }
+   .informacion li{
+      width: 120px;
+   }
+}
