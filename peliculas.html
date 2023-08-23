@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloP.css">
+    <title>Peliculas</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logos">
+            <span class="abrir-menu" id="abrir"><img src="imagenes/menu.png" alt=""></span>
+            <img id="logo" src="imagenes/logo.png" alt="">
+        </div>
+        <nav class="nav" id="nav">
+            <span class="cerrar-menu" id="cerrar"><img src="imagenes/cerrar.png" alt=""></span>
+            <div class="logoNav"><img src="imagenes/logo.png" alt=""></div>
+            <ul class="nav-list">
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="series.html">Series</a></li>
+                <li><a href="peliculas.html">Peliculas</a></li>
+            </ul>
+            <div class="copy">
+                <span>©Arconix2023</span>
+            </div>
+        </nav>
+
+        <div class="buscar">
+            <img id="lupa" src="imagenes/lupa.png" alt="">
+            <input type="text" name="buscador" class="buscar" id="searchInput" required placeholder="Buscar.." />
+            <label class="lbl-buscar"></label>
+
+        </div>
+    </header>
+    <section class="hero">
+        <div class="slide">
+            <ul>
+                <li>
+                    <img src="./imagenes/1.webp" alt="">
+                    <div class="text">
+                        <h1>Avengers Endgame</h1>
+                        <button id="open" data-modal="modal17">Reproducir</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="./imagenes/2.jpeg" alt="">
+                    <div class="text">
+                        <h1>Euphoria</h1>
+                        <button id="open" data-modal="modal18">Reproduccir</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="./imagenes/3.jpeg" alt="">
+                    <div class="text">
+                        <h1 id="open">After</h1>
+                        <button id="open" data-modal="modal19">Reproduccir</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="./imagenes/4.webp" alt="">
+                    <div class="text">
+                        <h1>Lucifer</h1>
+                        <button id="open" data-modal="modal20">Reproduccir</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="movie-list" class="container-peliculas">
+        <div class="titulo">
+            <h1>Peliculas</h1>
+            <hr>
+        </div>
+        <div id="genre-buttons"> <!--filtro generos-->
+            <div class="icono-pelicula"><img src="imagenes/pelicula.png" alt=""></div>
+            <button class="genre-button" onclick="filterByCategory('todo')">Todo</button>
+            <button class="genre-button" onclick="filterByCategory('accion')">Accion</button>
+            <button class="genre-button" onclick="filterByCategory('comedia')">Comedia</button>
+            <button class="genre-button" onclick="filterByCategory('terror')">Terror</button>
+            <button class="genre-button" onclick="filterByCategory('romance')">Romance</button>
+        </div>
+        <section class="peliculas_series">
+            <div class="containerti" data-category="romance">
+                <div class="tarjeta" data-modal="modal1"
+                    style="--i:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC1CMOVTRxs4v5U_-GBOChwaZR5HsKo7OP_g&usqp=CAU)">
+                    <h2 class="titulo1">Barbie</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="romance">
+                <div class="tarjeta" data-modal="modal2"
+                    style="--i:url(https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781508237839/purple-hearts-9781508237839_hr.jpg)">
+                    <h2 class="titulo1">Purple Hearts</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal3"
+                    style="--i:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhvKt0FhmhFhj9XnfYHJegR4CU_fMCy-MBgmkP6aTH68g1W7g0yR2Vzag0dRZkSO0WaCQ&usqp=CAU)">
+                    <h2 class="titulo1">El Hoyo</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="comedia">
+                <div class="tarjeta" data-modal="modal4"
+                    style="--i:url(https://images-na.ssl-images-amazon.com/images/S/pv-target-images/1831b36c1ef9ffafcff76dcfa28d0dc131b1c786090488fee38e1746c5406210._RI_TTW_.jpg)">
+                    <h2 class="titulo1">Una Esposa De Mentiras</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal5"
+                    style="--i:url(https://pics.filmaffinity.com/Guerra_Mundial_Z-473564207-large.jpg)">
+                    <h2 class="titulo1">Guerra Mundial Z</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal6"
+                    style="--i:url(https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg)">
+                    <h2 class="titulo1">Harry Potter</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="comedia">
+                <div class="tarjeta" data-modal="modal7"
+                    style="--i:url(https://m.media-amazon.com/images/M/MV5BMTU2MDY3MzAzMl5BMl5BanBnXkFtZTcwMTg0NjM5NA@@._V1_.jpg)">
+                    <h2 class="titulo1">Rio</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal8"
+                    style="--i:url(https://musicart.xboxlive.com/7/73ff5100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080)">
+                    <h2 class="titulo1">Venom</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal9"
+                    style="--i:url(https://www.thefilmik.com/wp-content/uploads/2023/04/The-Covenant-Movie-.webp)">
+                    <h2 class="titulo1">El Pacto</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="terror">
+                <div class="tarjeta" data-modal="modal10"
+                    style="--i:url(https://bloody-disgusting.com/wp-content/uploads/2023/04/ed-rise-2.png)">
+                    <h2 class="titulo1">Evil Dead</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="romance">
+                <div class="tarjeta" data-modal="modal11"
+                    style="--i:url(https://pics.filmaffinity.com/Culpa_maia-785263687-large.jpg)">
+                    <h2 class="titulo1">Culpa Mia</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal12"
+                    style="--i:url(https://hips.hearstapps.com/hmg-prod/images/transformers-lado-oscuro-luna-6481e27eec4a4.jpg)">
+                    <h2 class="titulo1">Transformers</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="terror">
+                <div class="tarjeta" data-modal="modal13"
+                    style="--i:url(https://s3-eu-west-1.amazonaws.com/abandomedia/db/poster/db_posters_55272.jpg)">
+                    <h2 class="titulo1">Megan</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal14"
+                    style="--i:url(https://pics.filmaffinity.com/John_Wick_4-101402041-large.jpg)">
+                    <h2 class="titulo1">John Wick 4</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal15"
+                    style="--i:url(https://www.moviementarios.com/wp-content/uploads/2022/03/el-gato-con-botas-el-ultimo-deseo.jpg)">
+                    <h2 class="titulo1">Gato con Botas</h2>
+                </div>
+            </div>
+            <div class="containerti" data-category="accion">
+                <div class="tarjeta" data-modal="modal16"
+                    style="--i:url(https://es.web.img3.acsta.net/c_310_420/pictures/14/06/17/14/04/353959.jpg)">
+                    <h2 class="titulo1">Guardianes de la Galaxia</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/zh4KhVSMwtQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">Barbie</h2>
+                <p>La película sigue a Barbie en un mundo realista mientras enfrenta desafíos y se embarca en una
+                    emocionante aventura. A través de su viaje, Barbie demuestra valores de empoderamiento, amistad y
+                    autenticidad, inspirando a audiencias de todas las edades a creer en sí mismas y perseguir sus
+                    sueños. La película captura la esencia del personaje icónico mientras explora temas contemporáneos
+                    en un entorno moderno y cautivador.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal1"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/WTLgg8oRSBE" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">Purple Hearts</h2>
+                <p>"Purple Hearts" es una película que combina romance y drama. La trama gira en torno a un encuentro
+                    fortuito entre un militar herido y una enfermera durante la guerra. A medida que luchan por superar
+                    sus propios traumas y desafíos, desarrollan un vínculo profundo que desafía las circunstancias
+                    difíciles. La película explora temas de amor, sacrificio y resiliencia en medio de la adversidad,
+                    creando una historia emotiva y conmovedora.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal2"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/24Lf7fmKIXI" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">El Hoyo</h2>
+                <p>"El Hoyo" es una película de ciencia ficción y horror. Ambientada en una prisión vertical, la trama
+                    sigue a dos reclusos por nivel mientras los alimentos se distribuyen de arriba hacia abajo. A medida
+                    que descienden los niveles, los conflictos emergen, mostrando las divisiones sociales y la lucha por
+                    la supervivencia. La película reflexiona sobre la desigualdad, el egoísmo humano y la decadencia de
+                    la sociedad, creando una narrativa impactante y perturbadora que invita a la reflexión sobre temas
+                    sociales y morales.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal3"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/xuZnmYjAKww" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">Una Esposa De Mentiras</h2>
+                <p>"Una Esposa de Mentiras" es una comedia romántica que sigue a un mentiroso compulsivo que finge estar
+                    en un matrimonio infeliz para encubrir sus propias mentiras. A medida que su farsa se complica, se
+                    ve atrapado en una serie de situaciones cómicas y enredos amorosos. La película explora los efectos
+                    de la deshonestidad y la importancia de la sinceridad en las relaciones, todo mientras ofrece
+                    momentos divertidos y reflexiones sobre la autenticidad en la vida y el amor.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal4"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/M0T0EPJIg7A" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">Guerra Mundial Z</h2>
+                <p>"Guerra Mundial Z" es una película de acción y suspenso que narra la historia de un exinvestigador de
+                    la ONU que es reclutado para detener una pandemia mundial de zombis. La trama sigue sus esfuerzos
+                    por comprender el origen del brote y encontrar una forma de detenerlo antes de que la humanidad sea
+                    aniquilada. La película ofrece secuencias intensas de acción y suspense mientras explora temas de
+                    supervivencia, cooperación global y la lucha contra una amenaza apocalíptica.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal5"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/HguSMW8XveQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">harry potter y las reliquias <br> de la muerte parte 2</h2>
+                <p>"Harry Potter y las Reliquias de la Muerte - Parte 2" es la última entrega de la serie
+                    cinematográfica basada en los libros de J.K. Rowling. En esta película, Harry Potter y sus amigos
+                    continúan su lucha contra el mago oscuro Lord Voldemort. La trama culmina en una épica batalla en
+                    Hogwarts, donde se revelan secretos, se enfrentan destinos y se decide el destino del mundo mágico.s
+                </p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal6"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal7" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/K2eEIELfg_Y" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">Rio</h2>
+                <p>"Río" es una película animada que sigue las aventuras de Blu, un guacamayo domesticado, que se
+                    embarca en un viaje a Río de Janeiro para salvar su especie en peligro. Junto a nuevos amigos, Blu
+                    se enfrenta a desafíos, descubre la vida salvaje y encuentra el amor. La película ofrece humor,
+                    música y coloridos paisajes brasileños, mientras aborda temas de libertad, autodescubrimiento y
+                    conservación de la naturaleza.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal7"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/zh4KhVSMwtQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">Venom</h1>
+                <p>"Venom" es una película de acción y ciencia ficción que sigue a Eddie Brock, un periodista que se
+                    fusiona con un simbionte alienígena llamado Venom. Esta unión le otorga habilidades sobrenaturales
+                    pero también desencadena una lucha interna entre su lado humano y la sed de poder de Venom. La
+                    película explora la dualidad de la relación entre Eddie y Venom mientras enfrentan a amenazas
+                    mayores. Con elementos de acción y suspenso, la película ofrece un vistazo a la complejidad de los
+                    anti-héroes y a la lucha entre el bien y el mal.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal8"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal9" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/PEiMg5RCDgk" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">El Pacto</h1>
+                <p>La Barbie estereotipada («Barbie») y una amplia gama de otras Barbies residen en Barbieland, una
+                    sociedad matriarcal donde todas las mujeres son seguras de sí mismas, autosuficientes y exitosas.
+                    Mientras que sus contrapartes Ken, pasan sus días participando en actividades recreativas en la
+                    playa, las Barbies ocupan todos los puestos de trabajo importantes, como médicas, abogadas y
+                    políticas</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal9"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal10" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/qrl1JWv4df8" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">Evil Dead Rise</h1>
+                <p>"Evil Dead Rise" es una próxima película de terror que forma parte de la franquicia "Evil Dead". En
+                    esta entrega, la trama se centra en dos hermanas que luchan por sobrevivir en una ciudad mientras
+                    son acosadas por fuerzas malignas provenientes del Necronomicón Ex-Mortis. La película promete
+                    intensas secuencias de horror, gore y terror sobrenatural, manteniendo la esencia siniestra y
+                    visceral de la saga "Evil Dead".</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal10"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal11" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/1SqMjrE0J6E" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">Culpa Mia</h1>
+                <p>"Culpa Mía" es una novela juvenil que forma parte de la trilogía "Culpables" escrita por Mercedes
+                    Ron. La historia sigue la relación tumultuosa entre los personajes principales mientras exploran el
+                    amor, los secretos y los obstáculos personales. La trama se desarrolla en un ambiente emocionalmente
+                    cargado y ofrece una mezcla de romance y drama, con personajes que enfrentan sus propios demonios
+                    internos mientras buscan la redención y el entendimiento mutuo.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal11"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal12" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/zh4KhVSMwtQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">Transformers</h1>
+                <p>Se centra en la guerra entre los Autobots, robots alienígenas con la capacidad de transformarse en
+                    vehículos, y los Decepticons, sus enemigos que buscan el dominio universal. La franquicia se
+                    caracteriza por acción, ciencia ficción y aventuras épicas, con historias que exploran la lucha
+                    entre el bien y el mal mientras estos robots transformables interactúan con los humanos y enfrentan
+                    amenazas intergalácticas.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal12"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal13" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/19Qgb5sUTmI" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">Megan</h2>
+                <p>"MEGAN" es una película de terror que se encuentra en producción a partir de mi fecha de conocimiento
+                    en septiembre de 2021. La trama sigue a una psicóloga que utiliza inteligencia artificial para
+                    tratar a su joven paciente, una niña llamada Megan. Sin embargo, a medida que la interacción con la
+                    IA avanza, comienzan a ocurrir eventos perturbadores y sobrenaturales que ponen en peligro a la
+                    psicóloga y a su familia. La película promete explorar los aspectos oscuros de la tecnología y la
+                    relación entre humanos y máquinas./p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal13"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal14" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/zh4KhVSMwtQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">John Wick 4</h1>
+                <p>El marqués Vincent de Gramont pretende matar a John Wick para afianzar su poder en la Orden Suprema.
+                    Sin embargo, John tratará de adelantarse a cada uno de sus movimientos hasta lograr enfrentarse cara
+                    a cara con su peor enemigo.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal14"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal15" class="modal" data-modal="modal16">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/zh4KhVSMwtQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">Gato Con Botas</h1>
+                <p>El Gato con Botas descubre que, debido a su pasión por la aventura, ha gastado ya 8 de sus 9 vidas.
+                    Por tanto, emprende un peligroso viaje en busca del legendario Último Deseo para solicitar que le
+                    restauren las vidas que ya perdió.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal15"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal16" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/zh4KhVSMwtQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">Guardianes De la Galaxia</h1>
+                <p>Un aventurero espacial se convierte en la presa de unos cazadores de tesoros después de robar el orbe
+                    de un villano traicionero. Cuando descubre su poder, debe hallar la forma de unir a unos rivales
+                    para salvar al universo.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal16"></img>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal17" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/TcMBFSGVi1c" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">Avengers Endgame</h1>
+                <p> La trama sigue a los Vengadores mientras intentan revertir el daño causado por el villano Thanos,
+                    quien aniquiló a la mitad de la vida en el universo usando las Gemas del Infinito. Los héroes
+                    restantes se unen en un último esfuerzo desesperado para revertir el chasquido de Thanos y restaurar
+                    la normalidad. La película combina acción intensa con momentos emotivos y concluye numerosas
+                    historias de los personajes del MCU.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal17"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal18" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/nqSQUrlnB9s" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">Euphoria</h1>
+                <p>"Euphoria" es una serie de televisión dramática que sigue la vida de un grupo de jóvenes mientras
+                    navegan por las complejidades de la adolescencia. La serie aborda temas como las relaciones, las
+                    adicciones, la identidad, la sexualidad y los desafíos emocionales que enfrentan. Con un enfoque
+                    crudo y visualmente impactante, "Euphoria" ofrece una mirada honesta y a menudo provocadora a las
+                    vidas de sus personajes mientras exploran cuestiones profundas y contemporáneas.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal18"></img>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal19" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/3zjxECCWwrU" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h1 class="titulo-descripcion">After</h1>
+                <p> La trama sigue a Tessa Young, una joven estudiante universitaria con una vida organizada y
+                    predecible, que se ve atraída por el enigmático y problemático Hardin Scott. A medida que su
+                    relación se desarrolla, Tessa se adentra en un mundo de pasión y turbulencia emocional que desafía
+                    sus creencias y cambia su perspectiva sobre el amor y la vida. La película explora los altibajos de
+                    una relación intensa y apasionada, mientras Tessa y Hardin luchan por encontrar su camino en medio
+                    de desafíos y secretos.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal19"></img>
+            </div>
+        </div>
+    </div>
+    <div id="modal20" class="modal">
+        <div class="container-modal">
+            <iframe class="video" src="https://www.youtube.com/embed/D6Ax6Z_xpWY" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="descripcion">
+                <h2 class="titulo-descripcion">Lucifer</h2>
+                <p>"Lucifer" es una serie de televisión que toma como punto de partida al diablo, Lucifer Morningstar,
+                    quien decide dejar su reinado en el infierno y vivir en Los Ángeles. Allí, se involucra en el mundo
+                    humano, ayuda a resolver crímenes y se convierte en un consultor para la policía. La serie mezcla
+                    elementos de drama policial, comedia y fantasía, explorando la redención, la moralidad y la
+                    identidad de Lucifer mientras lidia con su pasado celestial y sus relaciones con otros personajes,
+                    incluyendo la detective Chloe Decker.</p>
+            </div>
+            <div class="cerrar">
+                <img src="./imagenes/cerrar.png" class="close-modal" data-modal="modal20"></img>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="redes">
+            <p class="copy"> &copy;Arconix2023</p>
+            <figure id="imagenesFooter">
+                <a href="#"><img class="imgfooter" src="imagenes/facebook.svg" alt=""></a>
+                <a href="#"><img class="imgfooter" src="imagenes/instagram.svg" alt=""></a>
+                <a href="#"><img class="imgfooter" src="imagenes/twitter.svg" alt=""></a>
+            </figure>
+            <img src="imagenes/logo.png" alt="">
+        </div>
+
+        <div class="informacionFooter">
+            <div class="informacion">
+                <h4>Plataforma</4>
+                    <br><br>
+                    <li>Creadores</li>
+                    <li>Comunidad</li>
+            </div>
+            <br>
+            <div class="informacion">
+                <h4>Compañia</4>
+                    <br><br>
+                    <li>Contactanos</li>
+            </div>
+            <br>
+            <div class="informacion">
+                <h4>Plataformas</4>
+                    <br><br>
+                    <li>Preferencias cookies</li>
+                    <li>Privacidad</li>
+                    <li>Formas de ver</li>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/filtro.js"></script>
+</body>
+
+</html>
