@@ -479,3 +479,109 @@ footer {
 .imgfooter {
    padding: 20px 15px 2px;
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+   header {
+      height: 50px;
+   }
+
+   .nav {
+      padding: 15px;
+      width: 200px;
+   }
+
+   .nav-list {
+      gap: 2rem;
+   }
+
+   header .nav .logoNav img {
+      width: 150px;
+      height: 150px;
+   }
+
+   header div img {
+      height: 20px;
+   }
+
+   #logo {
+      height: 30px;
+   }
+
+   .buscar {
+      height: 1px;
+      width: 140px;
+   }
+
+   .titulo {
+      padding-top: 13%;
+      font-size: 30px;
+   }
+
+   #genre-buttons {
+      width: 90%;
+   }
+
+   #genre-buttons button{
+      height: 30px;
+      width: 17%;
+   }
+
+   .modal{
+      margin-top: 60px;
+   }
+
+   .container-modal{
+      flex-direction: column;
+      width: 70%;
+      height: auto;
+      justify-items: center;
+   }
+
+   .video{
+      width: 100%;
+   }
+
+   .descripcion{
+      width: 80%;
+      font-size: 10px;
+      margin: 0 auto;
+      padding-top: 15px;
+      text-align: justify;
+   }
+
+   .close-modal{
+      height: 25px;
+      width: 25px;
+   }
+
+   .tarjeta{
+      width: 150px;
+      height: 200px;
+   }
+
+   footer {
+      height: 200px;
+      font-size: 10px;
+   }
+
+   .redes {
+      width: 50%;
+   }
+
+   .redes figure a img {
+      width: 20px;
+      height: 20px;
+   }
+
+   .imgfooter {
+      padding: 20px 0 0 8px;
+   }
+
+   .informacionFooter {
+      padding: 30px;
+   }
+
+   .informacion {
+      line-height: 25px;
+   }
+}
