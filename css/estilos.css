@@ -131,8 +131,6 @@ header nav .logoNav img {
    justify-content: center;
    align-items: center;
    color: #FFFFFF;
-   position: relative;
-   overflow: hidden;
 }
 
 .buscar input{
@@ -140,18 +138,11 @@ header nav .logoNav img {
    height: 76%;
    background: none;
    color: #FFFFFF;
-   padding-top: 20px;
+   padding-top: 15px;
    border: none;
    outline: 0px;
 }
-.buscar .lbl-buscar{
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   pointer-events: none;
-   border-bottom: 1px solid #c7c7c7;
-}
+
 
 #lupa {
    height: 15px;
@@ -314,7 +305,7 @@ aside{
    border-radius: 100%;
    width: 40px;
    cursor: pointer;
-   z-index: 90;
+   z-index: 1;
    transition: .2s ease all;
    text-align: center;
 }
@@ -382,7 +373,7 @@ aside{
 }
 
 .show-modal{
-   opacity: 1;
+   opacity: 2;
    pointer-events: unset;
 }
 
@@ -663,5 +654,97 @@ footer {
 
    .informacion {
       line-height: 25px;
+   }
+}
+@media (max-width: 480px) {
+   *{
+      font-size: 14px;
+   }
+   header{
+      height: 50px;
+   }
+   .buscar{
+      width: 150px;
+      height: 5px;
+      padding: 10px;
+   }
+   .nav{
+      width: 220px;
+      padding: 1rem;
+      gap: 4rem;
+      
+   }
+   header nav .logoNav img{
+      width: 150px;
+      height: 150px;
+   }
+   .text{
+      justify-content: center;
+      top: 25%;
+      height: 130px;
+   }
+   .text h1{
+      text-align: center;
+      font-size: 3em;
+   }
+   .text button{
+      height: 4vh;
+      width: 13rem;
+      margin-left: 0;
+   }
+   .contenedor-titulo h2{
+      font-size: 2.3em;
+   }
+   .tarjeta{
+      min-width: 100px;
+      min-height: 150px;
+      margin: 6.5px 0 0 6.5px;
+   }
+   .btn-right, .btn-left {
+      height: 35px;
+      width: 35px;
+      right: -5%;
+   }
+   .btn-right img, .btn-left img {
+      height: 20px;
+   } 
+   .informacionFooter{
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 0;
+      font-size: .8em;
+   }
+   footer{
+      flex-direction: column;
+   }
+   .redes img{
+      width: 30px;
+   }
+
+   .container-modal{
+      width: 90%;
+      height: 450px;
+      flex-direction: column;
+      padding: 0;
+      justify-content: center;
+   }
+   .video{
+      width: 100%;
+      height: 100%;
+      padding: 0;
+   }
+   .descripcion{
+      width: 100%;
+      margin: 0;
+      padding-bottom: 8%;
+   }
+   .titulo-descripcion{
+      font-size: 1.4em;
+      padding: 0;
+   }
+   .descripcion p{
+      width: 90%;
+      padding: 3% 0 7%;
+      font-size: 1em;
    }
 }
